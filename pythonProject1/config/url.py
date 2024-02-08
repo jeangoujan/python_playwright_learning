@@ -1,2 +1,2 @@
 class Url:
-    DOMAIN = 'https://halykmarket.com'
+    DOMAIN = 'https://google.com'
