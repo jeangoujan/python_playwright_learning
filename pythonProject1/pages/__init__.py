@@ -1,3 +1,4 @@
-from pages.index_page import IndexPage
+from pages.home_page import HomePage
 
-index_page = IndexPage()
+
+
