@@ -20,7 +20,7 @@ class Url:
     #Categories:
     PHONES_AND_GADGETS = '/category/telefoni-i-gadzheti'
     HEALTH_AND_BEAUTY = '/category/krasota-i-zdorove'
-    LAPTOS_AND_PC = '/category/noutbuki-i-kompyuteri'
+    LAPTOPS_AND_PC = '/category/noutbuki-i-kompyuteri'
     KITCHEN_EQUIPMENT = '/category/kuhonnaya-tehnika'
     HOME_APPLIANCES = '/category/tehnika-dlya-doma'
     TELEVIZORS = '/category/televizori'

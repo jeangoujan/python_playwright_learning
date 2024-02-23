@@ -2,6 +2,7 @@ from playwright.sync_api import Locator, Page
 import config
 
 
+
 class HomePage:
     # Header
     _BUTTON_HALYK_LOGIN = f'text=Войти'
@@ -24,10 +25,16 @@ class HomePage:
 
     next_slide_button = "section.slider.container div.swiper-button-next"
 
+
+
+
+
     def next_banner_slide(self, locator, clicks):
+        # self.page.mouse.move(0,20)
         for _ in range(clicks):
             self.page.locator(locator).click()
         self.page.wait_for_timeout(timeout=1000)
+
     # ==================================================================================================================
 
     # Categories========================================================================================================

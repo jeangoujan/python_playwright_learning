@@ -123,6 +123,7 @@ class TestHomePage:
 
     # CATEGORIES-CHECK==================================================================================================
 
+    @pytest.mark.categories
     def test_telefony_i_gadzheti(self, home_page, page):
         home_page.open_page()
         assert home_page.link_checking(home_page.CATEGORIES_PHONES_AND_GADGETS), "Переход на категорию не работает"
@@ -130,82 +131,153 @@ class TestHomePage:
 
     # todo China Goods
 
+    @pytest.mark.categories
     def test_health_and_beauty(self, home_page, page):
         home_page.open_page()
         assert home_page.link_checking(home_page.CATEGORIES_BEAUTY_AND_HEALTH), "Переход на категорию не работает"
         assert home_page.page.url == config.url.BASE_URL + config.url.HEALTH_AND_BEAUTY, f"Неверный URL после перехода. Ожидался {config.url.BASE_URL + config.url.HEALTH_AND_BEAUTY}, получен {page.url}"
 
+    @pytest.mark.categories1
     def test_laptops_and_pc(self, home_page, page):
         home_page.open_page()
         assert home_page.link_checking(home_page.CATEGORIES_LAPTOPS_AND_PC), "Переход на категорию не работает"
-        assert home_page.page.url == config.url.BASE_URL + config.url.LAPTOS_AND_PC, f"Неверный URL после перехода. Ожидался {config.url.BASE_URL + config.url.LAPTOS_AND_PC}, получен {page.url}"
+        assert home_page.page.url == config.url.BASE_URL + config.url.LAPTOPS_AND_PC, f"Неверный URL после перехода. Ожидался {config.url.BASE_URL + config.url.LAPTOPS_AND_PC}, получен {page.url}"
 
+    @pytest.mark.categories
     def test_kitchen_equipment(self, home_page, page):
         home_page.open_page()
         assert home_page.link_checking(home_page.CATEGORIES_KITCHEN_EQUIPMENT), "Переход на категорию не работает"
         assert home_page.page.url == config.url.BASE_URL + config.url.KITCHEN_EQUIPMENT, f"Неверный URL после перехода. Ожидался {config.url.BASE_URL + config.url.KITCHEN_EQUIPMENT}, получен {page.url}"
 
+    @pytest.mark.categories
     def test_home_appliances(self, home_page, page):
         home_page.open_page()
         assert home_page.link_checking(home_page.CATEGORIES_HOME_APPLIANCES), "Переход на категорию не работает"
         assert home_page.page.url == config.url.BASE_URL + config.url.HOME_APPLIANCES, f"Неверный URL после перехода. Ожидался {config.url.BASE_URL + config.url.HOME_APPLIANCES}, получен {page.url}"
 
+    @pytest.mark.categories
     def test_televizors(self, home_page, page):
         home_page.open_page()
         assert home_page.link_checking(home_page.CATEGORIES_TELEVISORS), "Переход на категорию не работает"
         assert home_page.page.url == config.url.BASE_URL + config.url.TELEVIZORS, f"Неверный URL после перехода. Ожидался {config.url.BASE_URL + config.url.TELEVIZORS}, получен {page.url}"
 
+    @pytest.mark.categories
     def test_construction_and_repair(self, home_page, page):
         home_page.open_page()
         assert home_page.link_checking(home_page.CATEGORIES_CONSTRUCTION_AND_REPAIR), "Переход на категорию не работает"
         assert home_page.page.url == config.url.BASE_URL + config.url.CONSTRUCTION_AND_REPAIR, f"Неверный URL после перехода. Ожидался {config.url.BASE_URL + config.url.CONSTRUCTION_AND_REPAIR}, получен {page.url}"
 
+    @pytest.mark.categories
     def test_photo_and_video(self, home_page, page):
         home_page.open_page()
         assert home_page.link_checking(home_page.CATEGORIES_PHOTO_AND_VIDEO), "Переход на категорию не работает"
         assert home_page.page.url == config.url.BASE_URL + config.url.PHOTO_AND_VIDEO, f"Неверный URL после перехода. Ожидался {config.url.BASE_URL + config.url.PHOTO_AND_VIDEO}, получен {page.url}"
 
+    @pytest.mark.categories
     def test_autogoods(self, home_page, page):
         home_page.open_page()
         assert home_page.link_checking(home_page.CATEGORIES_AUTOGOODS), "Переход на категорию не работает"
         assert home_page.page.url == config.url.BASE_URL + config.url.AUTOGOODS, f"Неверный URL после перехода. Ожидался {config.url.BASE_URL + config.url.AUTOGOODS}, получен {page.url}"
 
+    @pytest.mark.categories
     def test_furniture(self, home_page, page):
         home_page.open_page()
         assert home_page.link_checking(home_page.CATEGORIES_FURNITURE), "Переход на категорию не работает"
         assert home_page.page.url == config.url.BASE_URL + config.url.FURNITURE, f"Неверный URL после перехода. Ожидался {config.url.BASE_URL + config.url.FURNITURE}, получен {page.url}"
 
+    @pytest.mark.categories
     def test_sport_and_rest(self, home_page, page):
         home_page.open_page()
         assert home_page.link_checking(home_page.CATEGORIES_SPORT_AND_REST), "Переход на категорию не работает"
         assert home_page.page.url == config.url.BASE_URL + config.url.SPORT_AND_REST, f"Неверный URL после перехода. Ожидался {config.url.BASE_URL + config.url.SPORT_AND_REST}, получен {page.url}"
 
+    @pytest.mark.categories
     def test_jewelleries(self, home_page, page):
         home_page.open_page()
         assert home_page.link_checking(home_page.CATEGORIES_JEWELLERY), "Переход на категорию не работает"
         assert home_page.page.url == config.url.BASE_URL + config.url.JEWELLERY_ACCESORIES, f"Неверный URL после перехода. Ожидался {config.url.BASE_URL + config.url.JEWELLERY_ACCESORIES}, получен {page.url}"
 
+    @pytest.mark.categories
     def test_pharmacy(self, home_page, page):
         home_page.open_page()
         assert home_page.link_checking(home_page.CATEGORIES_PHARMACY), "Переход на категорию не работает"
         assert home_page.page.url == config.url.BASE_URL + config.url.PHARMACY, f"Неверный URL после перехода. Ожидался {config.url.BASE_URL + config.url.PHARMACY}, получен {page.url}"
 
+    @pytest.mark.categories
     def test_clothes(self, home_page, page):
         home_page.open_page()
         assert home_page.link_checking(home_page.CATEGORIES_CLOTHES), "Переход на категорию не работает"
         assert home_page.page.url == config.url.BASE_URL + config.url.CLOTHES, f"Неверный URL после перехода. Ожидался {config.url.BASE_URL + config.url.CLOTHES}, получен {page.url}"
 
+    @pytest.mark.categories
     def test_shoes(self, home_page, page):
         home_page.open_page()
         assert home_page.link_checking(home_page.CATEGORIES_SHOES), "Переход на категорию не работает"
         assert home_page.page.url == config.url.BASE_URL + config.url.SHOES, f"Неверный URL после перехода. Ожидался {config.url.BASE_URL + config.url.SHOES}, получен {page.url}"
 
+
     @pytest.mark.categories
     def test_accesories(self, home_page, page):
         home_page.open_page()
-        home_page.next_banner_slide(home_page.categories_next_slide_button, 6)
-        assert home_page.link_checking(home_page.CATEGORIES_BEAUTY_AND_HEALTH), "Переход на категорию не работает"
-        assert home_page.page.url == config.url.BASE_URL + config.url.HEALTH_AND_BEAUTY, f"Неверный URL после перехода. Ожидался {config.url.BASE_URL + config.url.HEALTH_AND_BEAUTY}, получен {page.url}"
+        home_page.next_banner_slide(home_page.categories_next_slide_button, 4)
+        assert home_page.link_checking(home_page.CATEGORIES_ACCESORIES), "Переход на категорию не работает"
+        assert home_page.page.url == config.url.BASE_URL + config.url.ACCESORIES, f"Неверный URL после перехода. Ожидался {config.url.BASE_URL + config.url.ACCESORIES}, получен {page.url}"
+
+    @pytest.mark.categories
+    def test_office_products(self, home_page, page):
+        home_page.open_page()
+        home_page.next_banner_slide(home_page.categories_next_slide_button, 4)
+        assert home_page.link_checking(home_page.CATEGORIES_OFFICE_PRODUCTS), "Переход на категорию не работает"
+        assert home_page.page.url == config.url.BASE_URL + config.url.OFFICE_PRODUCTS, f"Неверный URL после перехода. Ожидался {config.url.BASE_URL + config.url.OFFICE_PRODUCTS}, получен {page.url}"
+
+    @pytest.mark.categories
+    def test_dosug_art(self, home_page, page):
+        home_page.open_page()
+        home_page.next_banner_slide(home_page.categories_next_slide_button, 4)
+        assert home_page.link_checking(home_page.CATEGORIES_DOSUG_ART), "Переход на категорию не работает"
+        assert home_page.page.url == config.url.BASE_URL + config.url.DOSUG_ART, f"Неверный URL после перехода. Ожидался {config.url.BASE_URL + config.url.DOSUG_ART}, получен {page.url}"
+
+    @pytest.mark.categories
+    def test_halyk_shop(self, home_page, page):
+        home_page.open_page()
+        home_page.next_banner_slide(home_page.categories_next_slide_button, 4)
+        assert home_page.link_checking(home_page.CATEGORIES_HALYK_SHOP), "Переход на категорию не работает"
+        assert home_page.page.url == config.url.BASE_URL + config.url.HALYK_SHOP, f"Неверный URL после перехода. Ожидался {config.url.BASE_URL + config.url.HALYK_SHOP}, получен {page.url}"
+
+    @pytest.mark.categories
+    def test_goods_for_kids(self, home_page, page):
+        home_page.open_page()
+        home_page.next_banner_slide(home_page.categories_next_slide_button, 4)
+        assert home_page.link_checking(home_page.CATEGORIES_GOODS_FOR_KIDS), "Переход на категорию не работает"
+        assert home_page.page.url == config.url.BASE_URL + config.url.KIDS_GOODS, f"Неверный URL после перехода. Ожидался {config.url.BASE_URL + config.url.KIDS_GOODS}, получен {page.url}"
+
+    @pytest.mark.categories
+    def test_flower(self, home_page, page):
+        home_page.open_page()
+        home_page.next_banner_slide(home_page.categories_next_slide_button, 4)
+        assert home_page.link_checking(home_page.CATEGORIES_FLOWERS), "Переход на категорию не работает"
+        assert home_page.page.url == config.url.BASE_URL + config.url.FLOWERS, f"Неверный URL после перехода. Ожидался {config.url.BASE_URL + config.url.FLOWERS}, получен {page.url}"
+
+    @pytest.mark.categories
+    def test_vitamins(self, home_page, page):
+        home_page.open_page()
+        home_page.next_banner_slide(home_page.categories_next_slide_button, 4)
+        assert home_page.link_checking(home_page.CATEGORIES_VITAMINS), "Переход на категорию не работает"
+        assert home_page.page.url == config.url.BASE_URL + config.url.VITAMINS, f"Неверный URL после перехода. Ожидался {config.url.BASE_URL + config.url.VITAMINS}, получен {page.url}"
+
+    @pytest.mark.categories
+    def test_goods_for_home_and_dacha(self, home_page, page):
+        home_page.open_page()
+        home_page.next_banner_slide(home_page.categories_next_slide_button, 4)
+        assert home_page.link_checking(home_page.CATEGORIES_GOODS_FOR_HOME), "Переход на категорию не работает"
+        assert home_page.page.url == config.url.BASE_URL + config.url.GOODS_FOR_HOME_AND_DACHA, f"Неверный URL после перехода. Ожидался {config.url.BASE_URL + config.url.GOODS_FOR_HOME_AND_DACHA}, получен {page.url}"
+
+    @pytest.mark.categories
+    def test_goods_for_animals(self, home_page, page):
+        home_page.open_page()
+        home_page.next_banner_slide(home_page.categories_next_slide_button,4 )
+        assert home_page.link_checking(home_page.CATEGORIES_GOODS_FOR_ANIMALS), "Переход на категорию не работает"
+        assert home_page.page.url == config.url.BASE_URL + config.url.GOODS_FOR_ANIMALS, f"Неверный URL после перехода. Ожидался {config.url.BASE_URL + config.url.GOODS_FOR_ANIMALS}, получен {page.url}"
 
     # def test_promotions_link(self, home_page, page):
     #     home_page.open_page()
